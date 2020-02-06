@@ -44,7 +44,7 @@ const room = {
     square: (c.WIDTH * c.HEIGHT) / 100000000,
     linear: Math.sqrt((c.WIDTH * c.HEIGHT) / 100000000)
   },
-  maxFood: ((c.WIDTH * c.HEIGHT) / 10000) * c.FOOD_AMOUNT,
+  maxFood: ((c.WIDTH * c.HEIGHT) / 10000000) * c.FOOD_AMOUNT,
   isInRoom: location => {
     return (
       location.x >= 0 &&
@@ -82,7 +82,7 @@ room.findType("bas4");
 room.findType("roid");
 room.findType("rock");
 room.nestFoodAmount =
-  (1.1 * Math.sqrt(room.nest.length)) / room.xgrid / room.ygrid;
+  (1 * Math.sqrt(room.nest.length)) / room.xgrid / room.ygrid;
 room.random = () => {
   return {
     x: ran.irandom(room.width),
@@ -5997,7 +5997,7 @@ var maintainloop = (() => {
           return e;
         });
       // Sum it up
-      let maxFood = 1 + room.maxFood + 15 * census.tank;
+      let maxFood = 1 + room.maxFood + 1 * census.tank;
       let maxNestFood = 1 + room.maxFood * room.nestFoodAmount;
       let foodAmount = census.sum;
       let nestFoodAmount = censusNest.sum;
