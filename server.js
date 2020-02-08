@@ -44,7 +44,7 @@ const room = {
     square: (c.WIDTH * c.HEIGHT) / 100000000,
     linear: Math.sqrt((c.WIDTH * c.HEIGHT) / 100000000)
   },
-  maxFood: ((c.WIDTH * c.HEIGHT) / 10000000) * c.FOOD_AMOUNT,
+  maxFood: ((c.WIDTH * c.HEIGHT) / 50000000) * c.FOOD_AMOUNT,
   isInRoom: location => {
     return (
       location.x >= 0 &&
@@ -854,7 +854,7 @@ class io_spin extends IO {
   }
 
   think(input) {
-    this.a += 0.05;
+    this.a += 0.02;
     let offset = 0;
     if (this.body.bond != null) {
       offset = this.body.bound.angle;
@@ -4088,7 +4088,7 @@ const sockets = (() => {
           // Create and bind a body for the player host
           let body = new Entity(loc);
           body.protect();
-          body.define(Class.basic); // Start as a basic tank
+          body.define(Class.eventtester); // Start as a basic tank
           body.name = name; // Define the name
           // Dev hax
           if (socket.key === "testl" || socket.key === "testk") {
