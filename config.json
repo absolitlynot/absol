@@ -45,7 +45,7 @@
   "MIN_SPEED": 0.001,
   "FOOD_AMOUNT": 10,
   "SKILL_BOOST": 5,
-  "BOTS": 8,
+  "BOTS": 9,
   "GLASS_HEALTH_FACTOR": 2,
   "ANTI_BEGGAR": true,
   "PREFIX": "k!"
