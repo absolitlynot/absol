@@ -4088,7 +4088,7 @@ const sockets = (() => {
           // Create and bind a body for the player host
           let body = new Entity(loc);
           body.protect();
-          body.define(Class.eventtester); // Start as a basic tank
+          body.define(Class.weakling); // Start as a basic tank
           body.name = name; // Define the name
           // Dev hax
           if (socket.key === "testl" || socket.key === "testk") {
