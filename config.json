@@ -18,11 +18,11 @@
   "BANNED_CHARACTER_REGEX": "/[\uFDFD\u200E\u0000]/gi",
   "ROOM_SETUP": [
     ["roid", "norm", "norm", "rock", "norm", "norm", "roid"],
-    ["norm", "norm", "norm", "norm", "norm", "norm", "norm"],
-    ["norm", "norm", "roid", "nest", "roid", "norm", "norm"],
-    ["rock", "norm", "nest", "bas1", "nest", "norm", "rock"],
-    ["norm", "norm", "roid", "nest", "roid", "norm", "norm"],
-    ["norm", "norm", "norm", "norm", "norm", "norm", "norm"],
+    ["norm", "rock", "norm", "norm", "norm", "rock", "norm"],
+    ["norm", "norm", "roid", "bas2", "roid", "norm", "norm"],
+    ["roid", "norm", "bas2", "nest", "bas2", "norm", "roid"],
+    ["norm", "norm", "roid", "bas2", "roid", "norm", "norm"],
+    ["norm", "rock", "norm", "norm", "norm", "rock", "norm"],
     ["roid", "norm", "norm", "rock", "norm", "norm", "roid"]
   ],
   "X_GRID": 7,
