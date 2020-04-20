@@ -7226,7 +7226,7 @@ let server = http.createServer((req, res) => {
   switch (pathname) {
     case "/":
       res.writeHead(200);
-      res.end("<!DOCTYPE html><h3>Arras</h3>");
+      res.end('<!DOCTYPE html><h3>Arras</h3><button onclick="window.location.href = \'https://arras.io/#host=arrastic.glitch.me\';">Open (test server)</button><button onclick="window.location.href = \'https://arras.io/#host=arrastic.herokuapp.com\';">Open (main server)</button>');
       break;
     case "/mockups.json":
       res.setHeader("Access-Control-Allow-Origin", "*");
@@ -7263,3 +7263,8 @@ let websockets = (() => {
 setInterval(gameloop, room.cycleSpeed);
 setInterval(maintainloop, 200);
 setInterval(speedcheckloop, 1000);
+setInterval(poisonLoop, room.cycleSpeed * 7);
+setInterval(burnLoop, room.cycleSpeed * 7);
+setInterval(shockLoop, room.cycleSpeed * 7);
+setInterval(iceLoop, room.cycleSpeed * 7);  
+  
