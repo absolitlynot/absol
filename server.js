@@ -2613,7 +2613,7 @@ class Entity {
         break;
       case "flame":
         this.maxSpeed = this.topSpeed;
-        this.damp -= 0.01;
+        this.damp -= 0.1;
         break;
       case "motor":
         this.maxSpeed = 0;
