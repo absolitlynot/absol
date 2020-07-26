@@ -7064,7 +7064,7 @@ var maintainloop = (() => {
           return e;
         });
       // Sum it up
-      let maxFood = 1 + room.maxFood + 1 * census.tank;
+      let maxFood = 20 + room.maxFood + 1 * census.tank;
       let maxNestFood = 1 + room.maxFood * room.nestFoodAmount;
       let foodAmount = census.sum;
       let nestFoodAmount = censusNest.sum;
@@ -7097,7 +7097,7 @@ var maintainloop = (() => {
         makeNestFood();
       /************* UPGRADE FOOD ************/
       if (!food.length) return 0;
-      for (let i = Math.ceil(food.length / 100); i > 0; i--) {
+      for (let i = Math.ceil(food.length / 10000); i > 0; i--) {
         let o = food[ran.irandom(food.length - 1)], // A random food instance
           oldId = -1000,
           overflow,
