@@ -1114,7 +1114,7 @@ class Skill {
       c.GLASS_HEALTH_FACTOR *
       apply(2 / c.GLASS_HEALTH_FACTOR - 1, attrib[skcnv.hlt]);
     this.mob = apply(0.8, attrib[skcnv.mob]);
-    this.rgn = apply(25, attrib[skcnv.rgn]);
+    this.rgn = apply(20, attrib[skcnv.rgn]);
 
     this.brst =
       0.3 *
@@ -2694,6 +2694,14 @@ class Entity {
         nullVector(this.accel);
         this.blend = ref.blend;
         break;
+      case "accel":
+   this.maxSpeed = this.topSpeed;
+   this.damp = -0.05;
+break;
+case "grow":
+   this.SIZE += 1;
+   this.maxSpeed = this.topSpeed;
+break;
     }
     this.accel.x += engine.x * this.control.power;
     this.accel.y += engine.y * this.control.power;
@@ -4983,7 +4991,7 @@ const sockets = (() => {
                     if (time - socket.statuslastHeartbeat > c.maxHeartbeatInterval)
                       socket.kick('Lost heartbeat.')
                   }*/
-        }, 250);
+        }, 250); //
 
         return {
           subscribe(socket) {
@@ -5723,7 +5731,7 @@ var gameloop = (() => {
             x: element.x + x,
             y: element.y + y
             })
-            o.define(Class['iceEffect'])
+            o.define(Class.iceEffect)
         }
         if (element.iceed && element.type == 'tank') {
              let x = element.size + 10
@@ -5736,7 +5744,7 @@ var gameloop = (() => {
             x: element.x + x,
             y: element.y + y
             })
-            o.define(Class['iceEffect'])
+            o.define(Class.iceEffect)
           
             if (!element.invuln) {
               element.velocity.x -= element.velocity.x / (0.8 - element.iceLevel);
@@ -5763,7 +5771,7 @@ var gameloop = (() => {
             x: element.x + x,
             y: element.y + y
             })
-            o.define(Class['iceEffect'])
+            o.define(Class.iceEffect)
           
             if (!element.invuln) {
               element.velocity.x -= element.velocity.x / (0.8 - element.iceLevel);
@@ -5789,7 +5797,7 @@ var gameloop = (() => {
             x: element.x + x,
             y: element.y + y
             })
-            o.define(Class['iceEffect'])
+            o.define(Class.iceEffect)
           
             if (!element.invuln) {
               element.velocity.x -= element.velocity.x / (0.8 - element.iceLevel);
@@ -5815,7 +5823,7 @@ var gameloop = (() => {
             x: element.x + x,
             y: element.y + y
             })
-            o.define(Class['iceEffect'])
+            o.define(Class.iceEffect)
           
             if (!element.invuln) {
               element.velocity.x -= element.velocity.x / (0.8 - element.iceLevel);
@@ -5841,7 +5849,7 @@ var gameloop = (() => {
             x: element.x + x,
             y: element.y + y
             })
-            o.define(Class['iceEffect'])
+            o.define(Class.iceEffect)
           
             if (!element.invuln) {
               element.velocity.x -= element.velocity.x / (0.8 - element.iceLevel);
@@ -5867,7 +5875,7 @@ var gameloop = (() => {
             x: element.x + x,
             y: element.y + y
             })
-            o.define(Class['iceEffect'])
+            o.define(Class.iceEffect)
           
             if (!element.invuln) {
               element.velocity.x -= element.velocity.x / (0.8 - element.iceLevel);
