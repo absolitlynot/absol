@@ -702,10 +702,10 @@ class io_avoid extends IO {
     ) {
       return (
         test.master.id !== masterId &&
-         (test.type === "bullet"||
+        (test.type === "bullet" ||
           test.type === "drone" ||
           test.type === "swarm" ||
-          test.type === "trap"  ||
+          test.type === "trap" ||
           test.type === "block") &&
         sqrdst < range
       );
@@ -1158,7 +1158,7 @@ class Skill {
         if (
           this.level == c.TIER_1 ||
           this.level == c.TIER_2 ||
-          this.level == c.TIER_3 
+          this.level == c.TIER_3
         ) {
           this.canUpgrade = true;
         }
@@ -1858,35 +1858,35 @@ class Entity {
     this.killCount = { solo: 0, assists: 0, bosses: 0, killers: [] };
     this.creationTime = new Date().getTime();
     // Inheritance
-      this.poisoned = false
-        this.poison = false
-        this.poisonedBy = -1
-        this.basecamp = 0
-        this.poisonLevel = 20
-        this.poisonToApply = 0
-        this.showpoison = false
-        this.poisonTimer = 0
-        this.poisontimeinflict = 3.5
-        this.ice = false
-        this.iceedBy = -1
-        this.iceLevel = 0
-        this.iceToApply = 0
-        this.showice = false
-        this.iceTimer = 0 
-        this.shocked = false
-        this.shock = false
-        this.shockedBy = -1
-        this.shockLevel = 20
-        this.shockToApply = 0
-        this.shockburn = false
-        this.shockTimer = 0
-        this.bruned = false
-        this.burn = false
-        this.burnedBy = -1
-        this.burnLevel = 80
-        this.burnToApply = 0
-        this.showburn = false
-        this.burnTimer = 0
+    this.poisoned = false;
+    this.poison = false;
+    this.poisonedBy = -1;
+    this.basecamp = 0;
+    this.poisonLevel = 20;
+    this.poisonToApply = 0;
+    this.showpoison = false;
+    this.poisonTimer = 0;
+    this.poisontimeinflict = 3.5;
+    this.ice = false;
+    this.iceedBy = -1;
+    this.iceLevel = 0;
+    this.iceToApply = 0;
+    this.showice = false;
+    this.iceTimer = 0;
+    this.shocked = false;
+    this.shock = false;
+    this.shockedBy = -1;
+    this.shockLevel = 20;
+    this.shockToApply = 0;
+    this.shockburn = false;
+    this.shockTimer = 0;
+    this.bruned = false;
+    this.burn = false;
+    this.burnedBy = -1;
+    this.burnLevel = 80;
+    this.burnToApply = 0;
+    this.showburn = false;
+    this.burnTimer = 0;
 
     this.master = master;
     this.source = this;
@@ -2078,7 +2078,7 @@ class Entity {
     }
     if (set.MOTION_TYPE != null) {
       this.motionType = set.MOTION_TYPE;
-      }
+    }
     if (set.POISON != null) {
       this.poison = set.POISON;
     }
@@ -2154,68 +2154,68 @@ class Entity {
     if (set.HAS_NO_RECOIL != null) {
       this.settings.hasNoRecoil = set.HAS_NO_RECOIL;
     }
-     // poison
-        if (set.POISON != null) {
-          this.poison = set.POISON
-        }
-        if (set.POISON_TIME != null) {
-          this.poisontimeinflict = set.POISON_TIME
-        }
-        if (set.POISONED != null) {
-          this.poisoned = set.POISONED
-        }
-        if (set.POISON_TO_APPLY != null) {
-          this.poisonToApply = set.POISON_TO_APPLY
-        }
+    // poison
+    if (set.POISON != null) {
+      this.poison = set.POISON;
+    }
+    if (set.POISON_TIME != null) {
+      this.poisontimeinflict = set.POISON_TIME;
+    }
+    if (set.POISONED != null) {
+      this.poisoned = set.POISONED;
+    }
+    if (set.POISON_TO_APPLY != null) {
+      this.poisonToApply = set.POISON_TO_APPLY;
+    }
 
-        if (set.SHOWPOISON != null) {
-          this.showpoison = set.SHOWPOISON
-        }
-        // ice/slowness
-        if (set.ICE != null) {
-          this.ice = set.ICE
-        }
-        if (set.ICEED != null) {
-          this.iceed = set.ICEED
-        }
-        if (set.ICE_TO_APPLY != null) {
-          this.iceToApply = set.ICE_TO_APPLY
-        }
-        if (set.SHOWICE != null) {
-          this.showice = set.SHOWICE
-        }
-      // burn
-        if (set.BURN != null) {
-          this.burn = set.BURN
-        }
-        if (set.BURNED != null) {
-          this.burned = set.BURNED
-        }
-        if (set.BURN_TO_APPLY != null) {
-          this.burnToApply = set.BURN_TO_APPLY
-        }
-        if (set.SHOWBURN != null) {
-          this.showburn = set.SHOWBURN
-        }
-        if (set.LONGBURN != null) {
-          this.longburn = set.LONGBURN
-        }
-        if (set.MOREBURNAREA != null) {
-          this.largeburn = set.MOREBURNAREA
-        }
-      //shock
-             if (set.SHOCK != null) {
-          this.shock = set.SHOCK
-        }
-        if (set.SHOCKED != null) {
-          this.shocked = set.SHOCKED
-        }
-        if (set.SHOCK_TO_APPLY != null) {
-          this.shockToApply = set.SHOCK_TO_APPLY
-        }
-        if (set.SHOWSHOCK != null) {
-          this.showshock = set.SHOWSHOCK 
-        }
+    if (set.SHOWPOISON != null) {
+      this.showpoison = set.SHOWPOISON;
+    }
+    // ice/slowness
+    if (set.ICE != null) {
+      this.ice = set.ICE;
+    }
+    if (set.ICEED != null) {
+      this.iceed = set.ICEED;
+    }
+    if (set.ICE_TO_APPLY != null) {
+      this.iceToApply = set.ICE_TO_APPLY;
+    }
+    if (set.SHOWICE != null) {
+      this.showice = set.SHOWICE;
+    }
+    // burn
+    if (set.BURN != null) {
+      this.burn = set.BURN;
+    }
+    if (set.BURNED != null) {
+      this.burned = set.BURNED;
+    }
+    if (set.BURN_TO_APPLY != null) {
+      this.burnToApply = set.BURN_TO_APPLY;
+    }
+    if (set.SHOWBURN != null) {
+      this.showburn = set.SHOWBURN;
+    }
+    if (set.LONGBURN != null) {
+      this.longburn = set.LONGBURN;
+    }
+    if (set.MOREBURNAREA != null) {
+      this.largeburn = set.MOREBURNAREA;
+    }
+    //shock
+    if (set.SHOCK != null) {
+      this.shock = set.SHOCK;
+    }
+    if (set.SHOCKED != null) {
+      this.shocked = set.SHOCKED;
+    }
+    if (set.SHOCK_TO_APPLY != null) {
+      this.shockToApply = set.SHOCK_TO_APPLY;
+    }
+    if (set.SHOWSHOCK != null) {
+      this.showshock = set.SHOWSHOCK;
+    }
     if (set.CRAVES_ATTENTION != null) {
       this.settings.attentionCraver = set.CRAVES_ATTENTION;
     }
@@ -2695,13 +2695,13 @@ class Entity {
         this.blend = ref.blend;
         break;
       case "accel":
-   this.maxSpeed = this.topSpeed;
-   this.damp = -0.05;
-break;
-case "grow":
-   this.SIZE += 1;
-   this.maxSpeed = this.topSpeed;
-break;
+        this.maxSpeed = this.topSpeed;
+        this.damp = -0.05;
+        break;
+      case "grow":
+        this.SIZE += 1;
+        this.maxSpeed = this.topSpeed;
+        break;
     }
     this.accel.x += engine.x * this.control.power;
     this.accel.y += engine.y * this.control.power;
@@ -3450,8 +3450,8 @@ const sockets = (() => {
           "[INFO] Socket closed. Views: " +
             views.length +
             ". Clients: " +
-            clients.length + 
-           "."
+            clients.length +
+            "."
         );
       }
       // Being kicked
@@ -5436,72 +5436,74 @@ var gameloop = (() => {
               n.damageRecieved += damage._me * deathFactor._me;
             }
           }
-           /*************   POISON  ***********/
-                      if (n.poison) {
-                        my.poisoned = true
-                        my.poisonedLevel = n.poisionToApply * (n.damage / 6)
-                        my.poisonTime = n.poisontimeinflict
-                        my.poisonedBy = n.master
-                      }
-                      if (my.poison) {
-                        n.poisoned = true
-                        n.poisonedLevel = my.poisionToApply * (my.damage / 6)
-                        n.poisonTime = my.poisontimeinflict
-                        n.poisonedBy = my.master
-                      }
-           /*************   Cr1t1cal ***********/
-                      if (n.crit) {
-                        my.crited = true
-                        my.critedLevel = n.critToApply * (n.damage / 6)
-                        my.critTime = 1
-                        my.critedBy = n.master
-                      }
-                      if (my.crit) {
-                        n.crited = true
-                        n.critLevel = my.critToApply * (my.damage / 6)
-                        n.critTime = 1
-                        n.critedBy = my.master
-                      }
-                      /*************   ICE  ***********/  
-                      if (n.ice) {
-                        my.iceed = true
-                        my.iceedLevel = n.iceToApply
-                        my.iceTime = 17
-                        my.iceedBy = n.master
-                      }
-                      if (my.ice) {
-                        n.iceed = true
-                        n.iceedLevel = my.iceToApply
-                        n.iceTime = 17
-                        n.iceedBy = my.master
-                      }   
-                      /*************   SHOCK  ***********/ 
-                     if (n.shock) {
-                        my.shocked = true
-                        my.shockedLevel = n.shockToApply
-                        my.shockTime = 10
-                        my.shockedBy = n.master
-                      }
-                       if (my.shock) {
-                        n.shocked = true
-                        n.shockedLevel = my.shockToApply
-                        n.shockTime = 10
-                        n.shockedBy = my.master
-                      } 
-                      /*************   BURN  ***********/
-                      if (n.burn) {
-                        my.burned = true
-                        my.burnedLevel = n.burnToApply
-                        my.burnTime = 15
-                        my.burnedBy = n.master
-                      }
-                      if (my.burn) {
-                        n.burned = true
-                        n.burnedLevel = my.burnToApply
-                        n.burnTime = 15
-                        n.burnedBy = my.master
-                      }
-                 
+          /*************   POISON  ***********/
+          if (n.poison) {
+            my.poisoned = true;
+            my.poisonedLevel = n.poisionToApply * (n.damage / 6);
+            my.poisonTime = n.poisontimeinflict;
+            my.poisonedBy = n.master;
+          }
+          if (my.poison) {
+            n.poisoned = true;
+            n.poisonedLevel = my.poisionToApply * (my.damage / 6);
+            n.poisonTime = my.poisontimeinflict;
+            n.poisonedBy = my.master;
+          }
+          /*************   Cr1t1cal ***********/
+          if (n.crit) {
+            my.crited = true;
+            my.critedLevel = n.critToApply * (n.damage / 6);
+            my.critTime = 1;
+            my.critedBy = n.master;
+          }
+          if (my.crit) {
+            n.crited = true;
+            n.critLevel = my.critToApply * (my.damage / 6);
+            n.critTime = 1;
+            n.critedBy = my.master;
+          }
+          /*************   ICE  ***********/
+
+          if (n.ice) {
+            my.iceed = true;
+            my.iceedLevel = n.iceToApply;
+            my.iceTime = 17;
+            my.iceedBy = n.master;
+          }
+          if (my.ice) {
+            n.iceed = true;
+            n.iceedLevel = my.iceToApply;
+            n.iceTime = 17;
+            n.iceedBy = my.master;
+          }
+          /*************   SHOCK  ***********/
+
+          if (n.shock) {
+            my.shocked = true;
+            my.shockedLevel = n.shockToApply;
+            my.shockTime = 10;
+            my.shockedBy = n.master;
+          }
+          if (my.shock) {
+            n.shocked = true;
+            n.shockedLevel = my.shockToApply;
+            n.shockTime = 10;
+            n.shockedBy = my.master;
+          }
+          /*************   BURN  ***********/
+          if (n.burn) {
+            my.burned = true;
+            my.burnedLevel = n.burnToApply;
+            my.burnTime = 15;
+            my.burnedBy = n.master;
+          }
+          if (my.burn) {
+            n.burned = true;
+            n.burnedLevel = my.burnToApply;
+            n.burnTime = 15;
+            n.burnedBy = my.master;
+          }
+
           /************* DO MOTION ***********/
 
           if (nIsFirmCollide < 0) {
@@ -5711,192 +5713,242 @@ var gameloop = (() => {
     purgeEntities();
     room.lastCycle = util.time();
   };
-  })();
-  //let expected = 1000 / c.gameSpeed / 30;
-  //let alphaFactor = (delta > expected) ? expected / delta : 1;
-  //roomSpeed = c.gameSpeed * alphaFactor;
-  //setTimeout(moveloop, 1000 / roomSpeed / 30 - delta);
-  var iceLoop = (() => {
-    // Fun stuff, like RAINBOWS :D
-    function ice(my) {
-      entities.forEach(function(element) {
-        if (element.showice) {
-            let x = element.size + 10
-            let y = element.size + 10
-            Math.random() < 0.5 ? x *= -1 : x
-            Math.random() < 0.5 ? y *= -1 : y
-            Math.random() < 0.5 ? x *= Math.random() + 1 : x
-            Math.random() < 0.5 ? y *= Math.random() + 1 : y
-            var o = new Entity({
-            x: element.x + x,
-            y: element.y + y
-            })
-            o.define(Class.iceEffect)
-        }
-        if (element.iceed && element.type == 'tank') {
-             let x = element.size + 10
-            let y = element.size + 10
-            Math.random() < 0.5 ? x *= -1 : x
-           Math.random() < 0.5 ? y *= -1 : y
-            Math.random() < 0.5 ? x *= Math.random() + 1 : x
-            Math.random() < 0.5 ? y *= Math.random() + 1 : y
-            var o = new Entity({
-            x: element.x + x,
-            y: element.y + y
-            })
-            o.define(Class.iceEffect)
-          
-            if (!element.invuln) {
-              element.velocity.x -= element.velocity.x / (0.8 - element.iceLevel);
-              element.velocity.y -= element.velocity.y / (0.8 - element.iceLevel);
-                 }
-            element.iceTime -= 1
-            if (element.iceTime <= 0) element.iceed = false
-           
-            if (element.health.amount <= 0 && element.iceedBy != undefined && element.iceedBy.skill != undefined) {
-              element.iceedBy.skill.score += Math.ceil(util.getJackpot(element.iceedBy.skill.score));
-              element.iceedBy.sendMessage('You killed ' + element.name + ' with Ice.');
-              //element.sendMessage('You have been killed by ' + element.iceededBy.name + ' with Ice.')
-            }
-          }
-           
-        if (element.iceed && element.type == 'miniboss') {
-             let x = element.size + 10
-            let y = element.size + 10
-            Math.random() < 0.5 ? x *= -1 : x
-            Math.random() < 0.5 ? y *= -1 : y
-            Math.random() < 0.5 ? x *= Math.random() + 1 : x
-            Math.random() < 0.5 ? y *= Math.random() + 1 : y
-            var o = new Entity({
-            x: element.x + x,
-            y: element.y + y
-            })
-            o.define(Class.iceEffect)
-          
-            if (!element.invuln) {
-              element.velocity.x -= element.velocity.x / (0.8 - element.iceLevel);
-              element.velocity.y -= element.velocity.y / (0.8 - element.iceLevel);
-                 }
-            element.iceTime -= 1
-            if (element.iceTime <= 0) element.iceed = false
-           
-            if (element.health.amount <= 0 && element.iceedBy != undefined && element.iceedBy.skill != undefined) {
-              element.iceedBy.skill.score += Math.ceil(util.getJackpot(element.iceedBy.skill.score));
-              element.iceedBy.sendMessage('You killed ' + element.name + ' with Ice.');
-              //element.sendMessage('You have been killed by ' + element.iceededBy.name + ' with Ice.')
-            }
-          }
-        if (element.iceed && element.type == 'mothership') {
-             let x = element.size + 10
-            let y = element.size + 10
-            Math.random() < 0.5 ? x *= -1 : x
-            Math.random() < 0.5 ? y *= -1 : y
-            Math.random() < 0.5 ? x *= Math.random() + 1 : x
-            Math.random() < 0.5 ? y *= Math.random() + 1 : y
-            var o = new Entity({
-            x: element.x + x,
-            y: element.y + y
-            })
-            o.define(Class.iceEffect)
-          
-            if (!element.invuln) {
-              element.velocity.x -= element.velocity.x / (0.8 - element.iceLevel);
-              element.velocity.y -= element.velocity.y / (0.8 - element.iceLevel);
-                 }
-            element.iceTime -= 1
-            if (element.iceTime <= 0) element.iceed = false
-           
-            if (element.health.amount <= 0 && element.iceedBy != undefined && element.iceedBy.skill != undefined) {
-              element.iceedBy.skill.score += Math.ceil(util.getJackpot(element.iceedBy.skill.score));
-              element.iceedBy.sendMessage('You killed ' + element.name + ' with Ice.');
-              element.sendMessage('You have been killed by ' + element.iceededBy.name + ' with Ice.')
-            }
-          }
-        if (element.iceed && element.type == 'food') {
-             let x = element.size + 10
-            let y = element.size + 10
-            Math.random() < 0.5 ? x *= -1 : x
-            Math.random() < 0.5 ? y *= -1 : y
-            Math.random() < 0.5 ? x *= Math.random() + 1 : x
-            Math.random() < 0.5 ? y *= Math.random() + 1 : y
-            var o = new Entity({
-            x: element.x + x,
-            y: element.y + y
-            })
-            o.define(Class.iceEffect)
-          
-            if (!element.invuln) {
-              element.velocity.x -= element.velocity.x / (0.8 - element.iceLevel);
-              element.velocity.y -= element.velocity.y / (0.8 - element.iceLevel);
-                 }
-            element.iceTime -= 1
-            if (element.iceTime <= 0) element.iceed = false
-           
-            if (element.health.amount <= 0 && element.iceedBy != undefined && element.iceedBy.skill != undefined) {
-              element.iceedBy.skill.score += Math.ceil(util.getJackpot(element.iceedBy.skill.score));
-              element.iceedBy.sendMessage('You killed ' + element.name + ' with Ice.');
-             // element.sendMessage('You have been killed by ' + element.iceededBy.name + ' with Ice.')
-            }
-          }
-        if (element.iceed && element.type == 'crasher') {
-             let x = element.size + 10
-            let y = element.size + 10
-            Math.random() < 0.5 ? x *= -1 : x
-            Math.random() < 0.5 ? y *= -1 : y
-            Math.random() < 0.5 ? x *= Math.random() + 1 : x
-            Math.random() < 0.5 ? y *= Math.random() + 1 : y
-            var o = new Entity({
-            x: element.x + x,
-            y: element.y + y
-            })
-            o.define(Class.iceEffect)
-          
-            if (!element.invuln) {
-              element.velocity.x -= element.velocity.x / (0.8 - element.iceLevel);
-              element.velocity.y -= element.velocity.y / (0.8 - element.iceLevel);
-                 }
-            element.iceTime -= 1
-            if (element.iceTime <= 0) element.iceed = false
-           
-            if (element.health.amount <= 0 && element.iceedBy != undefined && element.iceedBy.skill != undefined) {
-              element.iceedBy.skill.score += Math.ceil(util.getJackpot(element.iceedBy.skill.score));
-              element.iceedBy.sendMessage('You killed ' + element.name + ' with Ice.');
-              //element.sendMessage('You have been killed by ' + element.iceededBy.name + ' with Ice.')
-            }
-          }
-        if (element.iceed && element.type == 'bullet') {
-             let x = element.size + 10
-            let y = element.size + 10
-            Math.random() < 0.5 ? x *= -1 : x
-            Math.random() < 0.5 ? y *= -1 : y
-            Math.random() < 0.5 ? x *= Math.random() + 1 : x
-            Math.random() < 0.5 ? y *= Math.random() + 1 : y
-            var o = new Entity({
-            x: element.x + x,
-            y: element.y + y
-            })
-            o.define(Class.iceEffect)
-          
-            if (!element.invuln) {
-              element.velocity.x -= element.velocity.x / (0.8 - element.iceLevel);
-              element.velocity.y -= element.velocity.y / (0.8 - element.iceLevel);
-                 }
-            element.iceTime -= 1
-            if (element.iceTime <= 0) element.iceed = false
-           
-            if (element.health.amount <= 0 && element.iceedBy != undefined && element.iceedBy.skill != undefined) {
-              element.iceedBy.skill.score += Math.ceil(util.getJackpot(element.iceedBy.skill.score));
-              element.iceedBy.sendMessage('You killed ' + element.name + ' with Ice.');
-              //element.sendMessage('You have been killed by ' + element.iceededBy.name + ' with Ice.')
-            }
-          }
+})();
+//let expected = 1000 / c.gameSpeed / 30;
+//let alphaFactor = (delta > expected) ? expected / delta : 1;
+//roomSpeed = c.gameSpeed * alphaFactor;
+//setTimeout(moveloop, 1000 / roomSpeed / 30 - delta);
+var iceLoop = (() => {
+  // Fun stuff, like RAINBOWS :D
+  function ice(my) {
+    entities.forEach(function(element) {
+      if (element.showice) {
+        let x = element.size + 10;
+        let y = element.size + 10;
+        Math.random() < 0.5 ? (x *= -1) : x;
+        Math.random() < 0.5 ? (y *= -1) : y;
+        Math.random() < 0.5 ? (x *= Math.random() + 1) : x;
+        Math.random() < 0.5 ? (y *= Math.random() + 1) : y;
+        var o = new Entity({
+          x: element.x + x,
+          y: element.y + y
+        });
+        o.define(Class.iceEffect);
       }
-    )}
-    return () => {
-        //run the ice
-        ice()
-    };
-})(); 
+      if (element.iceed && element.type == "tank") {
+        let x = element.size + 10;
+        let y = element.size + 10;
+        Math.random() < 0.5 ? (x *= -1) : x;
+        Math.random() < 0.5 ? (y *= -1) : y;
+        Math.random() < 0.5 ? (x *= Math.random() + 1) : x;
+        Math.random() < 0.5 ? (y *= Math.random() + 1) : y;
+        var o = new Entity({
+          x: element.x + x,
+          y: element.y + y
+        });
+        o.define(Class.iceEffect);
+
+        if (!element.invuln) {
+          element.velocity.x -= element.velocity.x / (0.8 - element.iceLevel);
+          element.velocity.y -= element.velocity.y / (0.8 - element.iceLevel);
+        }
+        element.iceTime -= 1;
+        if (element.iceTime <= 0) element.iceed = false;
+
+        if (
+          element.health.amount <= 0 &&
+          element.iceedBy != undefined &&
+          element.iceedBy.skill != undefined
+        ) {
+          element.iceedBy.skill.score += Math.ceil(
+            util.getJackpot(element.iceedBy.skill.score)
+          );
+          element.iceedBy.sendMessage(
+            "You killed " + element.name + " with Ice."
+          );
+          //element.sendMessage('You have been killed by ' + element.iceededBy.name + ' with Ice.')
+        }
+      }
+
+      if (element.iceed && element.type == "miniboss") {
+        let x = element.size + 10;
+        let y = element.size + 10;
+        Math.random() < 0.5 ? (x *= -1) : x;
+        Math.random() < 0.5 ? (y *= -1) : y;
+        Math.random() < 0.5 ? (x *= Math.random() + 1) : x;
+        Math.random() < 0.5 ? (y *= Math.random() + 1) : y;
+        var o = new Entity({
+          x: element.x + x,
+          y: element.y + y
+        });
+        o.define(Class.iceEffect);
+
+        if (!element.invuln) {
+          element.velocity.x -= element.velocity.x / (0.8 - element.iceLevel);
+          element.velocity.y -= element.velocity.y / (0.8 - element.iceLevel);
+        }
+        element.iceTime -= 1;
+        if (element.iceTime <= 0) element.iceed = false;
+
+        if (
+          element.health.amount <= 0 &&
+          element.iceedBy != undefined &&
+          element.iceedBy.skill != undefined
+        ) {
+          element.iceedBy.skill.score += Math.ceil(
+            util.getJackpot(element.iceedBy.skill.score)
+          );
+          element.iceedBy.sendMessage(
+            "You killed " + element.name + " with Ice."
+          );
+          //element.sendMessage('You have been killed by ' + element.iceededBy.name + ' with Ice.')
+        }
+      }
+      if (element.iceed && element.type == "mothership") {
+        let x = element.size + 10;
+        let y = element.size + 10;
+        Math.random() < 0.5 ? (x *= -1) : x;
+        Math.random() < 0.5 ? (y *= -1) : y;
+        Math.random() < 0.5 ? (x *= Math.random() + 1) : x;
+        Math.random() < 0.5 ? (y *= Math.random() + 1) : y;
+        var o = new Entity({
+          x: element.x + x,
+          y: element.y + y
+        });
+        o.define(Class.iceEffect);
+
+        if (!element.invuln) {
+          element.velocity.x -= element.velocity.x / (0.8 - element.iceLevel);
+          element.velocity.y -= element.velocity.y / (0.8 - element.iceLevel);
+        }
+        element.iceTime -= 1;
+        if (element.iceTime <= 0) element.iceed = false;
+
+        if (
+          element.health.amount <= 0 &&
+          element.iceedBy != undefined &&
+          element.iceedBy.skill != undefined
+        ) {
+          element.iceedBy.skill.score += Math.ceil(
+            util.getJackpot(element.iceedBy.skill.score)
+          );
+          element.iceedBy.sendMessage(
+            "You killed " + element.name + " with Ice."
+          );
+          element.sendMessage(
+            "You have been killed by " + element.iceededBy.name + " with Ice."
+          );
+        }
+      }
+      if (element.iceed && element.type == "food") {
+        let x = element.size + 10;
+        let y = element.size + 10;
+        Math.random() < 0.5 ? (x *= -1) : x;
+        Math.random() < 0.5 ? (y *= -1) : y;
+        Math.random() < 0.5 ? (x *= Math.random() + 1) : x;
+        Math.random() < 0.5 ? (y *= Math.random() + 1) : y;
+        var o = new Entity({
+          x: element.x + x,
+          y: element.y + y
+        });
+        o.define(Class.iceEffect);
+
+        if (!element.invuln) {
+          element.velocity.x -= element.velocity.x / (0.8 - element.iceLevel);
+          element.velocity.y -= element.velocity.y / (0.8 - element.iceLevel);
+        }
+        element.iceTime -= 1;
+        if (element.iceTime <= 0) element.iceed = false;
+
+        if (
+          element.health.amount <= 0 &&
+          element.iceedBy != undefined &&
+          element.iceedBy.skill != undefined
+        ) {
+          element.iceedBy.skill.score += Math.ceil(
+            util.getJackpot(element.iceedBy.skill.score)
+          );
+          element.iceedBy.sendMessage(
+            "You killed " + element.name + " with Ice."
+          );
+          // element.sendMessage('You have been killed by ' + element.iceededBy.name + ' with Ice.')
+        }
+      }
+      if (element.iceed && element.type == "crasher") {
+        let x = element.size + 10;
+        let y = element.size + 10;
+        Math.random() < 0.5 ? (x *= -1) : x;
+        Math.random() < 0.5 ? (y *= -1) : y;
+        Math.random() < 0.5 ? (x *= Math.random() + 1) : x;
+        Math.random() < 0.5 ? (y *= Math.random() + 1) : y;
+        var o = new Entity({
+          x: element.x + x,
+          y: element.y + y
+        });
+        o.define(Class.iceEffect);
+
+        if (!element.invuln) {
+          element.velocity.x -= element.velocity.x / (0.8 - element.iceLevel);
+          element.velocity.y -= element.velocity.y / (0.8 - element.iceLevel);
+        }
+        element.iceTime -= 1;
+        if (element.iceTime <= 0) element.iceed = false;
+
+        if (
+          element.health.amount <= 0 &&
+          element.iceedBy != undefined &&
+          element.iceedBy.skill != undefined
+        ) {
+          element.iceedBy.skill.score += Math.ceil(
+            util.getJackpot(element.iceedBy.skill.score)
+          );
+          element.iceedBy.sendMessage(
+            "You killed " + element.name + " with Ice."
+          );
+          //element.sendMessage('You have been killed by ' + element.iceededBy.name + ' with Ice.')
+        }
+      }
+      if (element.iceed && element.type == "bullet") {
+        let x = element.size + 10;
+        let y = element.size + 10;
+        Math.random() < 0.5 ? (x *= -1) : x;
+        Math.random() < 0.5 ? (y *= -1) : y;
+        Math.random() < 0.5 ? (x *= Math.random() + 1) : x;
+        Math.random() < 0.5 ? (y *= Math.random() + 1) : y;
+        var o = new Entity({
+          x: element.x + x,
+          y: element.y + y
+        });
+        o.define(Class.iceEffect);
+
+        if (!element.invuln) {
+          element.velocity.x -= element.velocity.x / (0.8 - element.iceLevel);
+          element.velocity.y -= element.velocity.y / (0.8 - element.iceLevel);
+        }
+        element.iceTime -= 1;
+        if (element.iceTime <= 0) element.iceed = false;
+
+        if (
+          element.health.amount <= 0 &&
+          element.iceedBy != undefined &&
+          element.iceedBy.skill != undefined
+        ) {
+          element.iceedBy.skill.score += Math.ceil(
+            util.getJackpot(element.iceedBy.skill.score)
+          );
+          element.iceedBy.sendMessage(
+            "You killed " + element.name + " with Ice."
+          );
+          //element.sendMessage('You have been killed by ' + element.iceededBy.name + ' with Ice.')
+        }
+      }
+    });
+  }
+  return () => {
+    //run the ice
+    ice();
+  };
+})();
 var poisonLoop = (() => {
   // Fun stuff, like RAINBOWS :D
   function poison(my) {
@@ -5944,7 +5996,11 @@ var poisonLoop = (() => {
             util.getJackpot(element.skill.score)
           );
           element.poisonedBy.sendMessage(
-            "You killed " + element.name + "'s " + element.label + " with poison."
+            "You killed " +
+              element.name +
+              "'s " +
+              element.label +
+              " with poison."
           );
           element.sendMessage(
             "You have been killed by " +
@@ -6031,8 +6087,9 @@ var poisonLoop = (() => {
         });
         o.define(Class["poisonEffect"]);
 
-        if (!element.invuln && !element.invinc) {// do u know what local variables are
-          element.health.amount -= 10 * (element.poisonLevel / 20);//i guess u dont
+        if (!element.invuln && !element.invinc) {
+          // do u know what local variables are
+          element.health.amount -= 10 * (element.poisonLevel / 20); //i guess u dont
           element.shield.amount -= 10 * (element.poisonLevel / 20);
         }
 
@@ -6795,7 +6852,7 @@ var maintainloop = (() => {
             room['bas' + i].forEach((loc) => { f(loc, i); }); 
         }*/
     // Return the spawning function
-  let bots = [];
+    let bots = [];
     return () => {
       let census = {
         crasher: 0,
@@ -6840,7 +6897,7 @@ var maintainloop = (() => {
           });
         });
         let o = new Entity(room.random());
-        console.log(tank)
+        console.log(tank);
         o.color = 17;
         o.define(Class.bot);
         o.define(tank[Math.floor(Math.random() * tank.length)]);
@@ -6862,7 +6919,7 @@ var maintainloop = (() => {
                 }
             });*/
     };
-  })(); 
+  })();
   // The big food function
   let makefood = (() => {
     let food = [],
@@ -7234,7 +7291,9 @@ let server = http.createServer((req, res) => {
   switch (pathname) {
     case "/":
       res.writeHead(200);
-      res.end('<!DOCTYPE html><h3>Arras</h3><button onclick="window.location.href = \'https://arras.io/#host=arrastic.glitch.me\';">Open (test server)</button><button onclick="window.location.href = \'https://arras.io/#host=arrastic.herokuapp.com\';">Open (main server)</button>');
+      res.end(
+        "<!DOCTYPE html><h3>Arras</h3><button onclick=\"window.location.href = 'https://arras.io/#host=arrastic.glitch.me';\">Open (test server)</button><button onclick=\"window.location.href = 'https://arras.io/#host=arrastic.herokuapp.com';\">Open (main server)</button>"
+      );
       break;
     case "/mockups.json":
       res.setHeader("Access-Control-Allow-Origin", "*");
@@ -7274,5 +7333,4 @@ setInterval(speedcheckloop, 1000);
 setInterval(poisonLoop, room.cycleSpeed * 7);
 setInterval(burnLoop, room.cycleSpeed * 7);
 setInterval(shockLoop, room.cycleSpeed * 7);
-setInterval(iceLoop, room.cycleSpeed * 7);  
-  
+setInterval(iceLoop, room.cycleSpeed * 7);
