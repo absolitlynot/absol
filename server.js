@@ -6876,7 +6876,7 @@ var maintainloop = (() => {
       if (bots.length < c.BOTS) {
         let tank = [];
         let tier1 = [];
-        Class.mortal.UPGRADES_TIER_1.forEach(e => {
+        Class.follower.UPGRADES_TIER_1.forEach(e => {
           tier1.push(e);
           tank.push(e);
         });
