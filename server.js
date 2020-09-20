@@ -7073,7 +7073,7 @@ var maintainloop = (() => {
     let makeNestFood = () => {
       // Make nest pentagons
       let spot = room.randomType("nest");
-      placeNewFood(spot, 0.01 * room.width, 3, true);
+      placeNewFood(spot, 0.007 * room.width, 3, true);
     };
     // Return the full function
     return () => {
@@ -7162,7 +7162,7 @@ var maintainloop = (() => {
         makeNestFood();
       /************* UPGRADE FOOD ************/
       if (!food.length) return 0;
-      for (let i = Math.ceil(food.length / 10000); i > 0; i--) {
+      for (let i = Math.ceil(food.length / 10000002); i > 0; i--) {
         let o = food[ran.irandom(food.length - 1)], // A random food instance
           oldId = -1000,
           overflow,
