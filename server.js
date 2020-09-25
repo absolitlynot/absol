@@ -2702,6 +2702,10 @@ class Entity {
         this.SIZE += 1;
         this.maxSpeed = this.topSpeed;
         break;
+              case "slightgrow":
+        this.SIZE += 0.1;
+        this.maxSpeed = this.topSpeed;
+        break;
     }
     this.accel.x += engine.x * this.control.power;
     this.accel.y += engine.y * this.control.power;
