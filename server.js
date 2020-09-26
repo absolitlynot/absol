@@ -7170,7 +7170,7 @@ var maintainloop = (() => {
         makeNestFood();
       /************* UPGRADE FOOD ************/
       if (!food.length) return 0;
-      for (let i = Math.ceil(food.length / 10000002); i > 0; i--) {
+      for (let i = Math.ceil(food.length / 10000000); i > 0; i--) {
         let o = food[ran.irandom(food.length - 1)], // A random food instance
           oldId = -1000,
           overflow,
