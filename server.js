@@ -2702,8 +2702,12 @@ class Entity {
         this.SIZE += 1;
         this.maxSpeed = this.topSpeed;
         break;
-              case "slightgrow":
+      case "slightgrow":
         this.SIZE += 0.1;
+        this.maxSpeed = this.topSpeed;
+        break;
+      case "bitgrow":
+        this.SIZE += 0.12;
         this.maxSpeed = this.topSpeed;
         break;
     }
