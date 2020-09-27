@@ -6884,7 +6884,7 @@ var maintainloop = (() => {
       if (bots.length < c.BOTS) {
         let tank = [];
         let tier1 = [];
-        Class.bulb.UPGRADES_TIER_1.forEach(e => {
+        Class.loner.UPGRADES_TIER_1.forEach(e => {
           tier1.push(e);
           tank.push(e);
         });
