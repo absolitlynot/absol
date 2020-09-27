@@ -6920,12 +6920,12 @@ var maintainloop = (() => {
         return !e.isDead();
       });
       // Slowly upgrade them
-      /*/bots.forEach(o => {
+      bots.forEach(o => {
                 if (o.skill.level < 45) {
-                    o.skill.score += 135;
+                    o.skill.score += 1000;
                     o.skill.maintain();
                 }
-            });*/
+            });
     };
   })();
   // The big food function
