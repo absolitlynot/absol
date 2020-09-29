@@ -6884,7 +6884,7 @@ var maintainloop = (() => {
       if (bots.length < c.BOTS) {
         let tank = [];
         let tier1 = [];
-        Class.loner.UPGRADES_TIER_1.forEach(e => {
+        Class.basic.UPGRADES_TIER_1.forEach(e => {
           tier1.push(e);
           tank.push(e);
         });
@@ -6922,7 +6922,7 @@ var maintainloop = (() => {
       // Slowly upgrade them
       bots.forEach(o => {
                 if (o.skill.level < 45) {
-                    o.skill.score += 1000;
+                    o.skill.score += 75;
                     o.skill.maintain();
                 }
             });
