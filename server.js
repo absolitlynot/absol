@@ -2963,9 +2963,9 @@ class Entity {
           // Only if we give messages
           if (dothISendAText) {
             instance.sendMessage(
-              "You killed " +
+              "You yeeted " +
                 name +
-                (killers.length > 1 ? " (with some help)." : ".")
+                (killers.length > 1 ? "with another player." : ".")
             );
           }
         });
@@ -2982,7 +2982,7 @@ class Entity {
       });
       // Prepare it and clear the collision array.
       killText = killText.slice(0, -5);
-      if (killText === "You have been killed")
+      if (killText === "Kiki couldn't save you")
         killText = "You have died a stupid death";
       this.sendMessage(killText + "");
       // If I'm the leader, broadcast it:
