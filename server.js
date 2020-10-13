@@ -6912,7 +6912,7 @@ var maintainloop = (() => {
         o.skill.score = 26302;
         o.name += ran.chooseBotName();
         o.refreshBodyAttributes();
-        o.color = 16;
+        o.color = 1;
         bots.push(o);
       }
       // Remove dead ones
