@@ -1109,15 +1109,15 @@ class Skill {
     this.shi =
       c.GLASS_HEALTH_FACTOR *
       apply(2 / c.GLASS_HEALTH_FACTOR - 1, attrib[skcnv.shi]);
-    this.atk = apply(0.5, attrib[skcnv.atk]);
+    this.atk = apply(0.51, attrib[skcnv.atk]);
     this.hlt =
       c.GLASS_HEALTH_FACTOR *
       apply(2 / c.GLASS_HEALTH_FACTOR - 1, attrib[skcnv.hlt]);
     this.mob = apply(0.8, attrib[skcnv.mob]);
-    this.rgn = apply(20, attrib[skcnv.rgn]);
+    this.rgn = apply(18, attrib[skcnv.rgn]);
 
     this.brst =
-      0.3 *
+      0.4 *
       (0.5 * attrib[skcnv.atk] + 0.5 * attrib[skcnv.hlt] + attrib[skcnv.rgn]);
   }
 
@@ -6912,7 +6912,7 @@ var maintainloop = (() => {
         o.skill.score = 26302;
         o.name += ran.chooseBotName();
         o.refreshBodyAttributes();
-        o.color = 1;
+        o.color = 9;
         bots.push(o);
       }
       // Remove dead ones
