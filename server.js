@@ -6852,7 +6852,7 @@ var maintainloop = (() => {
             Class.sentryabsol,
             Class.sentrynest,
           ])
-        : ran.choose([Class.crasher, Class.blocker])
+        : ran.choose([Class.crasher, Class.blocks])
       let o = new Entity(spot);
       o.define(type);
       o.team = -100;
