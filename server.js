@@ -6834,7 +6834,7 @@ var maintainloop = (() => {
   let spawnCrasher = census => {
     if (
       ran.chance(
-        1 - (0.5 * census.crasher) / room.maxFood / room.nestFoodAmount
+        1 - (0.15 * census.crasher) / room.maxFood / room.nestFoodAmount
       )
     ) {
       let spot,
@@ -7189,7 +7189,7 @@ var maintainloop = (() => {
         makeNestFood();
       /************* UPGRADE FOOD ************/
       if (!food.length) return 0;
-      for (let i = Math.ceil(food.length / 10000000); i > 0; i--) {
+      for (let i = Math.ceil(food.length / 1000); i > 0; i--) {
         let o = food[ran.irandom(food.length - 1)], // A random food instance
           oldId = -1000,
           overflow,
@@ -7215,7 +7215,7 @@ var maintainloop = (() => {
             amount = nestFoodAmount;
           }
           // Upgrade stuff
-          o.foodCountup += Math.ceil(Math.abs(ran.gauss(0, 10)));
+          o.foodCountup += Math.ceil(Math.abs(ran.gauss(0, 1)));
           while (o.foodCountup >= (o.foodLevel + 1) * 100) {
             o.foodCountup -= (o.foodLevel + 1) * 100;
             if (
