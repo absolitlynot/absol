@@ -32,6 +32,7 @@
   "FOOD_NEST": [0, 0.0, 0.0, 0.005, 0.0023, 0.0002, 0],
   "MAX_SKILL": 9,
   "SOFT_MAX_SKILL": 0.59,
+  "TIER_0": 5,
   "TIER_1": 10,
   "TIER_2": 25,
   "TIER_3": 45,

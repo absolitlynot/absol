@@ -1156,6 +1156,7 @@ class Skill {
         this.level += 1;
         this.points += this.levelPoints;
         if (
+          this.level == c.TIER_0 ||
           this.level == c.TIER_1 ||
           this.level == c.TIER_2 ||
           this.level == c.TIER_3
@@ -2261,6 +2262,15 @@ class Entity {
     }
     if (set.RESET_UPGRADES) {
       this.upgrades = [];
+    }
+        if (set.UPGRADES_TIER_0 != null) {
+      set.UPGRADES_TIER_0.forEach(e => {
+        this.upgrades.push({
+          class: e,
+          level: c.TIER_0,
+          index: e.index
+        });
+      });
     }
     if (set.UPGRADES_TIER_1 != null) {
       set.UPGRADES_TIER_1.forEach(e => {
@@ -4200,7 +4210,7 @@ const sockets = (() => {
           // Create and bind a body for the player host
           let body = new Entity(loc);
           body.protect();
-          body.define(Class.weakling); // Start as a basic tank
+          body.define(Class.weakling); // Start as a weakling tank
           body.name = name; // Define the name
           // Dev hax
           if (socket.key === "testl" || socket.key === "testk") {
@@ -6802,7 +6812,7 @@ var maintainloop = (() => {
         util.log("[SPAWN] Preparing to spawn...");
         timer = 0;
         let choice = [];
-        switch (ran.chooseChance(40, 2)) {
+        switch (ran.chooseChance(20, 5, 10)) {
           case 0:
             choice = [[Class.elite_destroyer], 2, "a", "nest"];
             break;
@@ -6811,7 +6821,7 @@ var maintainloop = (() => {
             sockets.broadcast("A strange trembling...");
             break;
           case 2:
-            choice = [[Class.nestler], 3, "a", "nest"];
+            choice = [[Class.nestler], 3, "a", "norm"];
             sockets.broadcast("Good luck being swarmed!");
             break;
         }
@@ -6839,9 +6849,10 @@ var maintainloop = (() => {
             Class.sentryGun,
             Class.sentrySwarm,
             Class.sentryTrap,
-            Class.sentryabsol
+            Class.sentryabsol,
+            Class.sentrynest,
           ])
-        : Class.crasher;
+        : ran.choose([Class.crasher, Class.blocker])
       let o = new Entity(spot);
       o.define(type);
       o.team = -100;
@@ -6884,23 +6895,31 @@ var maintainloop = (() => {
       if (bots.length < c.BOTS) {
         let tank = [];
         let tier1 = [];
-        Class.follower.UPGRADES_TIER_1.forEach(e => {
+        Class.weakling.UPGRADES_TIER_0.forEach(e => {
           tier1.push(e);
           tank.push(e);
         });
         let tier2 = [];
         tier1.forEach(e => {
-          if (!e.UPGRADES_TIER_2) return;
-          e.UPGRADES_TIER_2.forEach(e => {
+          if (!e.UPGRADES_TIER_1) return;
+          e.UPGRADES_TIER_1.forEach(e => {
             tier2.push(e);
             tank.push(e);
           });
         });
         let tier3 = [];
         tier2.forEach(e => {
+          if (!e.UPGRADES_TIER_2) return;
+          e.UPGRADES_TIER_2.forEach(e => {
+            tier3.push(e);
+            tank.push(e);
+          });
+        });
+        let tier4 = [];
+        tier3.forEach(e => {
           if (!e.UPGRADES_TIER_3) return;
           e.UPGRADES_TIER_3.forEach(e => {
-            tier3.push(e);
+            tier4.push(e);
             tank.push(e);
           });
         });
@@ -6926,8 +6945,8 @@ var maintainloop = (() => {
                     o.skill.maintain();
                 }
             });
-    };
-  })();
+    }; 
+  })(); 
   // The big food function
   let makefood = (() => {
     let food = [],
