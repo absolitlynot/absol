@@ -6808,11 +6808,11 @@ var maintainloop = (() => {
       };
     })();
     return census => {
-      if (timer > 6000 && ran.dice(16000 - timer)) {
+      if (timer > 6000 && ran.dice(16000 - timer)) { //16000
         util.log("[SPAWN] Preparing to spawn...");
         timer = 0;
         let choice = [];
-        switch (ran.chooseChance(20, 5, 10)) {
+        switch (ran.chooseChance(20, 5)) {
           case 0:
             choice = [[Class.elite_destroyer], 2, "a", "nest"];
             break;
@@ -7215,7 +7215,7 @@ var maintainloop = (() => {
             amount = nestFoodAmount;
           }
           // Upgrade stuff
-          o.foodCountup += Math.ceil(Math.abs(ran.gauss(0, 1)));
+          o.foodCountup += Math.ceil(Math.abs(ran.gauss(0, 1))); //old one is 10
           while (o.foodCountup >= (o.foodLevel + 1) * 100) {
             o.foodCountup -= (o.foodLevel + 1) * 100;
             if (
