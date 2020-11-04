@@ -1117,7 +1117,7 @@ class Skill {
     this.rgn = apply(18, attrib[skcnv.rgn]);
 
     this.brst =
-      0.4 *
+      0.42 *
       (0.5 * attrib[skcnv.atk] + 0.5 * attrib[skcnv.hlt] + attrib[skcnv.rgn]);
   }
 
