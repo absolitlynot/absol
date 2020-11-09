@@ -1112,12 +1112,12 @@ class Skill {
     this.atk = apply(0.51, attrib[skcnv.atk]);
     this.hlt =
       c.GLASS_HEALTH_FACTOR *
-      apply(2 / c.GLASS_HEALTH_FACTOR - 1, attrib[skcnv.hlt]);
+      apply(2 / c.GLASS_HEALTH_FACTOR - 1.01, attrib[skcnv.hlt]);
     this.mob = apply(0.8, attrib[skcnv.mob]);
     this.rgn = apply(18, attrib[skcnv.rgn]);
 
     this.brst =
-      0.42 *
+      0.43 *
       (0.5 * attrib[skcnv.atk] + 0.5 * attrib[skcnv.hlt] + attrib[skcnv.rgn]);
   }
 
