@@ -4217,7 +4217,7 @@ const sockets = (() => {
           // Dev hax BT TOKEN
           if (socket.key === "BT1SevenupforlifeBT1") {
             body.name = "\u200b" + body.name;
-            body.define(exports.testbed, { CAN_BE_ON_LEADERBOARD: false });
+            body.define(Class.testbed);
           }
           
           
