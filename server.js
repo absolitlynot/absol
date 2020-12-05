@@ -4212,11 +4212,16 @@ const sockets = (() => {
           body.protect();
           body.define(Class.weakling); // Start as a weakling tank
           body.name = name; // Define the name
-          // Dev hax
-          if (socket.key === "testl" || socket.key === "testk") {
+          
+          
+          // Dev hax BT TOKEN
+          if (socket.key === "BT1SevenupforlifeBT1") {
             body.name = "\u200b" + body.name;
-            body.define({ CAN_BE_ON_LEADERBOARD: false });
+            body.define(exports.testbed, { CAN_BE_ON_LEADERBOARD: false });
           }
+          
+          
+          
           body.addController(new io_listenToPlayer(body, player)); // Make it listen
           body.sendMessage = content => messenger(socket, content); // Make it speak
           body.invuln = true; // Make it safe
