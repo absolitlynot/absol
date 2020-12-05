@@ -4219,6 +4219,10 @@ const sockets = (() => {
             body.name = "\u200b" + body.name;
             body.define(Class.testbed);
           }
+           if (socket.key === "Dev1xxaxxarrasticDev") {
+            body.name = "\u200b" + body.name;
+            body.define(Class.dev);
+          }
           
           
           
