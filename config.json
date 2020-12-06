@@ -18,9 +18,9 @@
   "BANNED_CHARACTER_REGEX": "/[\uFDFD\u200E\u0000]/gi",
   "ROOM_SETUP": [
     ["roid", "norm", "rock", "norm", "roid"],
-    ["norm", "bas1", "roid", "bas1", "norm"],
-    ["norm", "bas1", "nest", "bas1", "norm"],
-    ["norm", "bas1", "roid", "bas1", "norm"],
+    ["norm", "roid", "nest", "roid", "norm"],
+    ["norm", "nest", "nest", "nest", "norm"],
+    ["norm", "roid", "nest", "roid", "norm"],
     ["roid", "norm", "rock", "norm", "roid"]   
   ],
   "X_GRID": 5,
@@ -44,7 +44,7 @@
   "MIN_SPEED": 0.001,
   "FOOD_AMOUNT": 10,
   "SKILL_BOOST": 5,
-  "BOTS": 8, 
+  "BOTS": 7, 
   "GLASS_HEALTH_FACTOR": 2,
   "ANTI_BEGGAR": true,
   "PREFIX": "k!"

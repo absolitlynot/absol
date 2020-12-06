@@ -5466,13 +5466,13 @@ var gameloop = (() => {
           /*************   POISON  ***********/
           if (n.poison) {
             my.poisoned = true;
-            my.poisonedLevel = n.poisionToApply * (n.damage / 6);
+            my.poisonedLevel = n.poisionToApply * (n.damage / 7);
             my.poisonTime = n.poisontimeinflict;
             my.poisonedBy = n.master;
           }
           if (my.poison) {
             n.poisoned = true;
-            n.poisonedLevel = my.poisionToApply * (my.damage / 6);
+            n.poisonedLevel = my.poisionToApply * (my.damage / 7);
             n.poisonTime = my.poisontimeinflict;
             n.poisonedBy = my.master;
           }
