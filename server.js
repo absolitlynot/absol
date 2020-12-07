@@ -4210,7 +4210,7 @@ const sockets = (() => {
           // Create and bind a body for the player host
           let body = new Entity(loc);
           body.protect();
-          body.define(Class.eventtester); // Start as a weakling tank
+          body.define(Class.weakling); // Start as a weakling tank
           body.name = name; // Define the name
           
           
