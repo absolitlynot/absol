@@ -6821,16 +6821,16 @@ var maintainloop = (() => {
         util.log("[SPAWN] Preparing to spawn...");
         timer = 0;
         let choice = [];
-        switch (ran.chooseChance(20, 5)) {
+        switch (ran.chooseChance(20, 5, 7)) {
           case 0:
-            choice = [[Class.elite_destroyer], 2, "a", "nest"];
+            choice = [[Class.elite_destroyer], 1, "a", "nest"];
             break;
           case 1:
             choice = [[Class.palisade], 1, "castle", "norm"];
             sockets.broadcast("A strange trembling...");
             break;
           case 2:
-            choice = [[Class.nestler], 3, "a", "norm"];
+            choice = [[Class.nestler], 1, "a", "norm"];
             sockets.broadcast("Good luck being swarmed!");
             break;
         }
