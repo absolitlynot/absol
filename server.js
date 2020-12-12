@@ -6831,7 +6831,7 @@ var maintainloop = (() => {
             break;
           case 2:
             choice = [[Class.nestler], 1, "a", "norm"];
-            sockets.broadcast("Good luck being swarmed!");
+            sockets.broadcast("A angry hive of bees is appearing...");
             break;
         }
         boss.prepareToSpawn(...choice);
@@ -6860,6 +6860,7 @@ var maintainloop = (() => {
             Class.sentryTrap,
             Class.sentryabsol,
             Class.sentrynest,
+            Class.preangle,
           ])
         : ran.choose([Class.crasher, Class.blocks, Class.megacrasher])
       let o = new Entity(spot);
