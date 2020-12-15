@@ -7225,7 +7225,7 @@ var maintainloop = (() => {
             amount = nestFoodAmount;
           }
           // Upgrade stuff
-          o.foodCountup += Math.ceil(Math.abs(ran.gauss(0, 1))); //old one is 10
+          o.foodCountup += Math.ceil(Math.abs(ran.gauss(0, 10))); //old one is 10
           while (o.foodCountup >= (o.foodLevel + 1) * 100) {
             o.foodCountup -= (o.foodLevel + 1) * 100;
             if (

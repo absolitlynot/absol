@@ -2,7 +2,7 @@
   "host": "0.0.0.0",
   "servesStatic": true,
   "port": 3000,
-  "networkUpdateFactor": 24,  
+  "networkUpdateFactor": 30,  
   "socketWarningLimit": 10,
   "networkFrontlog": 1,
   "networkFallbackTime": 150,
