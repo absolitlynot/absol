@@ -7132,7 +7132,6 @@ var maintainloop = (() => {
         [3]: 0, // Penta
         [4]: 0, // Beta
         [5]: 0, // Alpha
-        [6]: 0,
         sum: 0
       };
       // Do the censusNest
@@ -7199,7 +7198,7 @@ var maintainloop = (() => {
         makeNestFood();
       /************* UPGRADE FOOD ************/
       if (!food.length) return 0;
-      for (let i = Math.ceil(food.length / 1000); i > 0; i--) {
+      for (let i = Math.ceil(food.length / 2000); i > 0; i--) { //old 1000
         let o = food[ran.irandom(food.length - 1)], // A random food instance
           oldId = -1000,
           overflow,
