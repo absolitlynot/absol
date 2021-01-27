@@ -2975,7 +2975,7 @@ class Entity {
             instance.sendMessage(
               "You yeeted " +
                 name +
-                (killers.length > 1 ? "with another player." : ".")
+                (killers.length > 1 ? " with another player." : ".")
             );
           }
         });
