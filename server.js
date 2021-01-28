@@ -2582,6 +2582,9 @@ class Entity {
       this.upgrades = [];
       this.define(saveMe);
       this.sendMessage("You have upgraded to " + this.label + ".");
+      if (saveMe.TOOLTIP != null && saveMe.TOOLTIP.length > 0) {
+        this.sendMessage(saveMe.TOOLTIP);
+      }
       let ID = this.id;
       entities.forEach(instance => {
         if (
