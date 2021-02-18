@@ -6864,6 +6864,7 @@ var maintainloop = (() => {
             Class.sentryabsol,
             Class.sentrynest,
             Class.preangle,
+            Class.sentryfactory,
           ])
         : ran.choose([Class.crasher, Class.blocks, Class.megacrasher])
       let o = new Entity(spot);
